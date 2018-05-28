@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="NS" extends="struts-default">
+		<global-results>
+			<result name="jsondata">
+				/jsondata.jsp
+			</result>
+		</global-results>
+
+		<action name="login" class="com.actions.LoginAction">
+		</action>
+
+		<action name="logout" class="com.actions.LogoutAction">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="save" class="com.actions.UserAction">
+		</action>
+		
+		<action name="agents" class="com.actions.AgentAction">
+			</action>
+
+<action name="account" class="com.actions.SavingsAction">
+			</action>
+
+
+		<action name="personal" class="com.actions.PersonalLoanAction">
+		</action>
+		
+			<action name="fixed" class="com.actions.PersonalLoanAction">
+		</action>
+		
+
+
+		<action name="personalnominallist" class="com.actions.PersonalLoanAction"
+			method="personallist">
+		</action>
+		
+		<action name="accountname" class="com.actions.PersonalLoanAction"
+			method="personalnominalname">
+		</action>
+		
+		<action name="homename" class="com.actions.PersonalLoanAction"
+			method="personalnominalname">
+		</action>
+		
+		
+		<action name="fixedname" class="com.actions.PersonalLoanAction"
+			method="personalnominalname">
+		</action>
+		
+		
+		<action name="recurringname" class="com.actions.PersonalLoanAction"
+			method="personalnominalname">
+		</action>
+
+		<action name="homelist" class="com.actions.PersonalLoanAction"
+			method="personallist">
+		</action>
+
+		<action name="fixedlist" class="com.actions.PersonalLoanAction"
+			method="personallist">
+		</action>
+
+		<action name="recurringlist" class="com.actions.PersonalLoanAction"
+			method="personallist">
+		</action>
+
+
+
+
+		<action name="personalmember" class="com.actions.PersonalLoanAction"
+			method="personalmemberList">
+		</action>
+
+
+		<action name="vehicle" class="com.actions.VehicleLoanAction">
+		</action>
+
+		<action name="getvehiclelist" class="com.actions.VehicleLoanAction"
+			method="vehicleList">
+		</action>
+
+		<action name="pigmi" class="com.actions.PigmiHolderAction">
+		</action>
+
+
+		<action name="adduserslist" class="com.actions.LoginAction"
+			method="userList">
+		</action>
+
+		<action name="getUserList" class="com.actions.LoginAction"
+			method="userList">
+		</action>
+
+		<action name="getUserPerm" class="com.actions.UserPermissionAction"
+			method="getUserPerm">
+		</action>
+
+		<action name="updateUserPerm" class="com.actions.UserPermissionAction"
+			method="updateUserPerm">
+		</action>
+
+		<action name="addusers" class="com.actions.LoginAction" method="addUser">
+		</action>
+
+		<!-- <action name="upload" class="com.actions.LoginAction" method="fileUpload"> 
+			<result name="success">addUser.jsp </result> </action> -->
+
+		<action name="updateadduser" class="com.actions.LoginAction"
+			method="updateUser">
+		</action>
+
+		<action name="deleteadduser" class="com.actions.LoginAction"
+			method="DeleteAddUser">
+		</action>
+
+
+		<action name="rsUser" class="com.actions.RegularShareAction"
+			method="addUser">
+		</action>
+
+		<action name="rsEdit" class="com.actions.RegularShareAction"
+			method="getRegularList">
+		</action>
+
+		<action name="regular" class="com.actions.RegularShareAction"
+			method="memberList">
+		</action>
+		<action name="vehiclemember" class="com.actions.VehicleLoanAction"
+			method="vehiclememberList">
+		</action>
+
+		<action name="vehicledate" class="com.actions.VehicleLoanAction"
+			method="GetVehicleList">
+		</action>
+
+		<action name="rsupdate" class="com.actions.RegularShareAction"
+			method="updateRegular">
+		</action>
+
+		<action name="rsdelete" class="com.actions.RegularShareAction"
+			method="DeleteRegularShare">
+		</action>
+
+
+
+
+		<action name="asUser" class="com.actions.AshareAction" method="addUser">
+		</action>
+
+		<action name="asEdit" class="com.actions.AshareAction" method="getAsList">
+		</action>
+		
+		<action name="fdEdit" class="com.actions.AshareAction" method="getAsList">
+		</action>
+		
+
+		<action name="asmember" class="com.actions.AshareAction"
+			method="asharememberList">
+		</action>
+
+		<action name="asupdate" class="com.actions.AshareAction"
+			method="updateAshare">
+		</action>
+
+		<action name="asdelete" class="com.actions.AshareAction"
+			method="DeleteAShare">
+		</action>
+
+
+		<action name="fixed" class="com.actions.FixedDepositAction"
+			method="addUser">
+		</action>
+
+		<action name="fxddetaillist" class="com.actions.FixedDepositAction"
+			method="fixedDetailList">
+		</action>
+
+		<action name="fdmember" class="com.actions.FixedDepositAction"
+			method="fixeddList">
+		</action>
+
+		<action name="accountname" class="com.actions.FixedDepositAction"
+			method="getNameacFromAccount">
+		</action>
+
+
+
+		<action name="fixed" class="com.actions.FixedDepositAction"
+			method="addUser">
+		</action>
+
+		<action name="member" class="com.actions.FixedDepositAction"
+			method="FixedDepositList">
+		</action>
+
+		<action name="fxddetaillist" class="com.actions.FixedDepositAction"
+			method="fixedDetailList">
+		</action>
+
+		<action name="fdmember" class="com.actions.FixedDepositAction"
+			method="fixeddList">
+		</action>
+
+		<action name="accountname" class="com.actions.FixedDepositAction"
+			method="getNameacFromAccount">
+		</action>
+
+
+		<action name="nsUser" class="com.actions.NominalShareAction"
+			method="addUser">
+		</action>
+
+		<action name="nsEdit" class="com.actions.NominalShareAction"
+			method="getNominalList">
+		</action>
+
+		<action name="nsmember" class="com.actions.NominalShareAction"
+			method="nominalmemberList">
+		</action>
+
+		<action name="nsupdate" class="com.actions.NominalShareAction"
+			method="updateNominal">
+		</action>
+
+		<action name="nsdelete" class="com.actions.NominalShareAction"
+			method="DeleteNominal">
+		</action>
+
+
+
+		<action name="ledgergroup" class="com.actions.LedgerGroupAction"
+			method="addUser">
+		</action>
+
+		<action name="ledgergrouplist" class="com.actions.LedgerGroupAction"
+			method="ledgerList">
+		</action>
+
+		<action name="branchlist" class="com.actions.BranchAction"
+			method="branchList">
+		</action>
+
+		<action name="subname" class="com.actions.LedgerGroupAction"
+			method="getNameFromSubGroup">
+		</action>
+
+		<action name="ledgeraccnt" class="com.actions.LedgerAccountAction"
+			method="addUser">
+		</action>
+
+		<action name="ledgeraccoutlist" class="com.actions.LedgerAccountAction"
+			method="accountList">
+		</action>
+
+		<action name="ledgeraccoutupdate" class="com.actions.LedgerAccountAction"
+			method="updateLedger">
+		</action>
+
+		<action name="ledgeraccountdelete" class="com.actions.LedgerAccountAction"
+			method="DeleteLedgerAccount">
+		</action>
+
+		<action name="addreceipts" class="com.actions.ReceiptAction"
+			method="addUser">
+		</action>
+
+		<action name="addreceiptlist" class="com.actions.ReceiptAction"
+			method="receiptList">
+		</action>
+
+		<action name="getaccountname" class="com.actions.ReceiptAction"
+			method="getAccountNameFromAccountNo">
+		</action>
+
+		<action name="getcellno" class="com.actions.ReceiptAction"
+			method="getCellFromAccountNo">
+		</action>
+
+		<action name="receiptnumber" class="com.actions.ReceiptAction"
+			method="getRecieptNo">
+		</action>
+
+		<action name="clearsession" class="com.actions.ReceiptAction"
+			method="clearReceiptDao">
+		</action>
+
+		<action name="addwithdraws" class="com.actions.WithdrawAction"
+			method="addUser">
+		</action>
+
+		<action name="addwithdrawlist" class="com.actions.WithdrawAction"
+			method="WithdrawList">
+		</action>
+
+		<action name="getname" class="com.actions.WithdrawAction"
+			method="getAccountNameFromAccountNo">
+		</action>
+
+		<action name="withdrawnumber" class="com.actions.WithdrawAction"
+			method="getWithdrawNo">
+		</action>
+
+ <!-- <action name="transnumber" class="com.actions.JournalAction"
+			method="getJournalNo">
+		</action>  -->
+
+
+
+		<action name="clearssession" class="com.actions.WithdrawAction"
+			method="clearWithdrawDao">
+		</action>
+
+		<action name="getcell" class="com.actions.WithdrawAction"
+			method="getCellFromAccountNo">
+		</action>
+
+		<action name="validation" class="com.actions.PendingValidateRejectAction">
+			<result name="success" type="redirect">index.jsp</result>
+		</action>
+
+		<action name="draftreceipts" class="com.actions.PendingReceiptAction"
+			method="addUser">
+		</action>
+
+		<action name="pendinglist" class="com.actions.PendingReceiptAction"
+			method="PendingValidateList">
+		</action>
+
+		<action name="draftwithdraw" class="com.actions.PendingWithdrawAction"
+			method="addUser">
+		</action>
+
+		<action name="wdrawlist" class="com.actions.PendingWithdrawAction"
+			method="PendingWithdrawList">
+		</action>
+
+		<action name="validation1" class="com.actions.PendingValidateRejectWithdrawAction">
+			<result name="success" type="redirect">index.jsp</result>
+		</action>
+
+		<action name="Ldgdetaillist" class="com.actions.LedgerAccountAction"
+			method="LedgerDetailList">
+		</action>
+
+		<action name="ledgerdetillist" class="com.actions.LedgerAccountAction"
+			method="ledgerdList">
+		</action>
+
+		<action name="accname" class="com.actions.LedgerAccountAction"
+			method="getNameFromAccount">
+		</action>
+
+		<action name="accountname" class="com.actions.VehicleLoanAction"
+			method="getNameFromAccount">
+		</action>
+
+		<action name="homename" class="com.actions.VehicleLoanAction"
+			method="getNameFromAccount">
+		</action>
+
+		<action name="memberdetiallist" class="com.actions.LedgerAccountAction"
+			method="memberList">
+		</action>
+
+		<action name="memberdlist" class="com.actions.LedgerAccountAction"
+			method="MemberDetailList">
+		</action>
+
+		<action name="member1" class="com.actions.LedgerAccountAction"
+			method="getNameacFromAccount">
+		</action>
+
+		<action name="DraftContra" class="com.actions.ContraAction"
+			method="addUser">
+		</action>
+
+		<action name="NewContra" class="com.actions.NewContraAction"
+			method="addUser"></action>
+
+		<action name="DraftJournal" class="com.actions.JournalAction"
+			method="addUser">
+		</action>
+
+		<action name="clearledgerdetails" class="com.actions.LedgerAccountAction"
+			method="clearledgerdetails">
+		</action>
+
+		<action name="ContraList" class="com.actions.ContraAction"
+			method="ContraInsertList">
+		</action>
+
+		<action name="contradelete" class="com.actions.ContraAction"
+			method="DeleteContra">
+		</action>
+
+		<action name="JournalList" class="com.actions.JournalAction"
+			method="JournalInsertList">
+		</action>
+
+		<action name="journaldelete" class="com.actions.JournalAction"
+			method="DeleteJournal">
+		</action>
+
+		<action name="branchInfo" class="com.actions.BranchAction"
+			method="addUser">
+			</action>
+			
+			<action name="Cpwd" class="com.actions.ChangePwdAction"
+			method="userList">
+		
+		</action>
+	</package>
+</struts>

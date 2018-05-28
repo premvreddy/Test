@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Database connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bankproj</property>
+
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- SQL dialect -->
+		<!-- The classname of a Hibernate org.hibernate.dialect.Dialect which allows 
+			Hibernate to generate SQL optimized for a particular relational database -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Echo all executed SQL to stdout show sql setting the log level to 
+			debug -->
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+
+		<mapping class="com.entities.UserInfoEntity" />
+		<mapping class="com.entities.UserPermissionsEntity" />
+		<mapping class="com.entities.UserEntity" />
+		<mapping class="com.entities.RegularShareEntity" />
+		<mapping class="com.entities.AshareEntity" />
+		<mapping class="com.entities.NominalShareEntity" />
+		<mapping class="com.entities.LedgerGroupEntity" />
+		<mapping class="com.dto.RegularInfoDto" />
+		<mapping class="com.entities.LedgerAccountEntity" />
+		<mapping class="com.entities.ReceiptEntity" />
+		<mapping class="com.entities.WithdrawEntity" />
+		<mapping class="com.entities.LedgerDetailEntity" />
+		<mapping class="com.entities.DraftDepositEntity" />
+		<mapping class="com.entities.MemberDetailsEntity" />
+		<mapping class="com.entities.RejectEntity" />
+		<mapping class="com.entities.DraftWithdrawEntity" />
+		<mapping class="com.entities.RejectWithdrawEntity" />
+		<mapping class="com.entities.DraftContraEntity" />
+		<mapping class="com.entities.NewContraEntity" />
+		<mapping class="com.entities.DraftJournalEntity" />
+		<mapping class="com.entities.BranchEntity" />
+		<mapping class="com.entities.AgentEntity" />
+		<mapping class="com.entities.PigmiHolderEntity" />
+		<mapping class="com.entities.VehicleLoanEntity" />
+		<mapping class="com.entities.PersonalLoanEntity" />
+		<mapping class="com.entities.FixedDepositEntity" />
+		
+		<mapping class="com.entities.AccountEntity" />
+		<mapping class="com.entities.ChangePwdEntity" />
+
+
+	</session-factory>
+</hibernate-configuration> 

@@ -1,0 +1,42 @@
+
+#jquery-script-menu {
+    background: #fff none repeat scroll 0 0;
+    border-top: 5px solid #316594;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+    box-sizing: content-box;
+    height: 90px;
+    left: 0;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+}
+.jquery-script-center {
+    margin: 0 auto;
+    width: 960px;
+}
+.jquery-script-center ul {
+    float: left;
+    line-height: 45px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 212px;
+}
+.jquery-script-center a {
+    text-decoration: none;
+}
+.jquery-script-ads {
+    float: right;
+    height: 90px;
+    width: 728px;
+}
+.jquery-script-clear {
+    clear: both;
+    height: 0;
+}
+
+#barcodeTarget,  #canvasTarget {
+margin-top: 20px;
+}
